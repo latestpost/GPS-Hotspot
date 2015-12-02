@@ -1,0 +1,23 @@
+<div ng-controller="MainController">
+    <section class="section container-fluid">
+        <h4>Hotspot List</h4>
+
+        <div style="height:200px;width:100%;background:grey">
+            <map class="map" ui-map="map" center="0,0" zoom="15"></map>
+        </div>
+
+        <div class="hotspots">
+            <div class="hotspotItem" ng-repeat="hotspot in hotspots">
+                <div class="">{{hotspot.locationName}}</div>
+                <div class="">{{hotspot.lat}} / {{hotspot.lon}}</div>
+                <input type="text" require ng-model="hotspot.number" /> 
+                <input type="text" require ng-model="hotspot.message" />
+                <div>
+                    <input class="actionButton" type="button" ng-click="updateHotspot($index)" value="Update"/>
+                    <input class="actionButton" type="button" ng-click="viewHotspot($index)" value="View"/>
+                    <input class="actionButton" type="button" ng-click="deleteHotspot($index)" value="Delete"/>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

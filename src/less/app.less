@@ -1,0 +1,87 @@
+@import "mobile-angular-ui/src/less/mobile-angular-ui-base.less";
+@import "mixins.less";
+@import "variables.less";
+
+hr{
+    margin-bottom:0px !important;
+    margin-top:0px !important;
+}
+.box{
+font-size: 1em;
+vertical-align: middle;
+line-height: 1;
+padding: 1%;
+overflow:hidden;
+border: 1px solid @lightGrey !important;
+}
+
+input{
+    padding:1%;
+    margin-top:1%;
+    border: 1px solid @lightGrey !important;
+}
+textarea{
+    padding:1%;
+    margin-top:1%;
+    width:100%;
+    border: 1px solid @lightGrey !important;
+}
+
+.map{
+    height:200px;width:100%;
+}
+
+.currentLocation{
+    .box;
+}
+
+.app-content{
+    overflow:scroll !important;
+}
+
+.hotspotAlert{
+    background:@lightGreen;
+    padding:2%;
+    margin-top:0%;
+    margin-bottom:0%;
+}
+
+.backgroundGrey{
+    background:@lightGrey;
+    border:1px solid @lightGrey;
+}
+
+.padmargin{
+    margin:4px;
+    padding:4px;
+}
+
+.number{
+    .padmargin;
+    background:white
+}
+
+.message{
+    .padmargin;
+    background:white;
+}
+
+.actionButton {
+    background:@lightBlue;
+    color:white;
+    border: none;
+    padding:8px;
+    margin:2px;
+    min-width:80px;
+    text-align:center;
+}
+
+.hotspotItem{
+    border:1px solid #eee;clear:both;padding:4px;
+}
+
+.hotspots{
+    .backgroundGrey;
+    overflow:scroll; 
+    max-height:400px;
+}

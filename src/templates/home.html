@@ -1,0 +1,33 @@
+<div ng-controller="MainController">
+    <section class="section container-fluid">
+        <div class="box">
+            <h4>Current Location</h4>
+            {{gpsProximity}}
+            <donut stroke="'#fff'" width="100" height="100" radius="15" ng-model="gpsProximity"></donut>
+
+            <div class="currentLocation">
+                Lat:{{currentLocation.lat}} Lon:{{currentLocation.lon}}
+            </div>
+            <div class="box hotspotAlert" ng-show="smsButton">
+                <h4>Current Hotspot - {{currentLocationName}}</h4>
+                <div class="number">{{currentMessageNumber}}</div>
+                <div class="message">{{currentMessageText}}</div>
+                <input  class="actionButton" type="button" ng-click="sendSMS(0)" value="Send SMS"/>
+            </div>
+
+            <div>
+                <input type="text" id="lat" require ng-model="lat" placeholder="Enter lat name" value="" />
+                <input type="text" id="lon" require ng-model="lon" placeholder="Enter lon name" value="" />
+                <input type="text" id="locationName" require ng-model="locationName" placeholder="Enter location name" value="" />
+                <br/>
+                <input id="numberTxt" require ng-model="numberTxt" placeholder="Enter mobile number" value="" type="text" />
+                <br/>
+                <textarea id="messageTxt" require ng-model="messageTxt" placeholder="Enter message"></textarea>
+                <br/>
+                <input class="actionButton" type="button" ng-click="addHotspot()" value="Add New Hotspot"/>
+            </div>
+        </div>
+        <hr/>
+        
+    </section>
+</div>

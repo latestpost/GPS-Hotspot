@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="myapp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="google-site-verification" content="" />
+        <link rel="shortcut icon" href="http://www.everyoneactive.com/wp-content/themes/mytheme/assets/images/favicon.ico" />
+        <title></title>
+        
+                    
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//www.everyoneactive.com/wp-content/themes/mytheme/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+        <!-- style.css -->
+        <link rel="stylesheet" href="http://www.everyoneactive.com/wp-content/themes/mytheme/style.css" type="text/css" media="all" />
+        <!-- bxSlider CSS file -->
+        <link href="//www.everyoneactive.com/wp-content/themes/mytheme/js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
+        <!-- fullcalendar CSS -->
+        <link href='//www.everyoneactive.com/wp-content/themes/mytheme/js/fullcalendar.css' rel='stylesheet' />
+        <link href='//www.everyoneactive.com/wp-content/themes/mytheme/js/fullcalendar.print.css' rel='stylesheet' media='print' />
+        <!-- bootstrap validator CSS -->
+        <link href='//www.everyoneactive.com/wp-content/themes/mytheme/js/bootstrapvalidator-dist-0.5.2/dist/css/bootstrapValidator.min.css' rel='stylesheet' />
+        <!-- tabbed centre facilities carousel -->
+        <link href="//www.everyoneactive.com/wp-content/themes/mytheme/css/centrefacilities.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="//www.everyoneactive.com/wp-content/themes/mytheme/assets/css/theme.css" media="all">
+        <link rel="stylesheet" type="text/css" href="//www.everyoneactive.com/wp-content/themes/mytheme/assets/css/responsive.css" media="all">
+        <link href="//www.everyoneactive.com/wp-content/themes/mytheme/assets/css/logbox.css" rel="stylesheet" />
+        <!--customise/overwrite CSS file-->
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <link rel="stylesheet" href="//www.everyoneactive.com/wp-content/themes/mytheme/assets/css/bootstrap.min.css">
+            <script type='text/javascript' src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <link rel="stylesheet" href="//www.everyoneactive.com/wp-content/themes/mytheme/assets/css/ie8.css">
+        <![endif]-->
+        <!--[if IE 9]><link rel="stylesheet" href="//www.everyoneactive.com/wp-content/themes/mytheme/assets/css/ie9.css"><![endif]-->
+        <link rel="stylesheet" type="text/css" href="//www.everyoneactive.com/wp-content/themes/mytheme/assets/css/fonts.css" media="all">
+
+
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.everyoneactive.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.1"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f;c.supports={simple:d("simple"),flag:d("flag")},c.supports.simple&&c.supports.flag||(f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='ajax-load-more-css'  href='http://www.everyoneactive.com/wp-content/plugins/ajax-load-more/core/css/ajax-load-more.css?ver=4.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.everyoneactive.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://www.everyoneactive.com/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='sherk-banners-styles-css'  href='http://www.everyoneactive.com/wp-content/plugins/sherk-carousel-banners/assets/css/style.css?ver=20121224' type='text/css' media='all' />
+<link rel='stylesheet' id='bxslider-styles-css'  href='http://www.everyoneactive.com/wp-content/plugins/sherk-carousel-banners/assets/css/jquery.bxslider.css?ver=20121224' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='//www.everyoneactive.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=2.2.8' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='//www.everyoneactive.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=2.2.8' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='//www.everyoneactive.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.2.8' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.everyoneactive.com/wp-includes/js/jquery/jquery.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://www.everyoneactive.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.everyoneactive.com/wp-content/plugins/sherk-carousel-banners/assets/js/sherk_banners-classes.js?ver=4.2.1'></script>
+<link rel='https://github.com/WP-API/WP-API' href='http://www.everyoneactive.com/wp-json' />
+    <script>
+        var nonce = 'f331801a49';
+        var restURL = 'http://www.everyoneactive.com/wp-json/';
+        var apiURL = 'http://www.everyoneactive.com/rest/';
+        var siteURL = 'http://www.everyoneactive.com/';
+        var ajaxURL = 'http://www.everyoneactive.com/wp-admin/admin-ajax.php';
+        var loginsecurity = '7b03195714';
+        var templatePath = '//www.everyoneactive.com/wp-content/themes/mytheme';
+        var currentUser = '0';
+    </script>
+
+    <script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//www.everyoneactive.com/?wordfence_logHuman=1&hid=45BB3F50507C65BA6F934CB3648EE0F7');
+</script>        
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-5598786-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script>
+                /*** Handle jQuery plugin naming conflict between jQuery UI and Bootstrap ***/
+                $.widget.bridge('uibutton', $.ui.button);
+                $.widget.bridge('uitooltip', $.ui.tooltip);
+        </script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               $('.hunderline').click(function(){
+                   var iframe ='<iframe width="10%" height="1px" src="http://everyoneactive.nutritioncompleteonline.com/api/logout" id="frame" name="frame" ></iframe>';
+                  
+                   $('html').append(iframe);
+
+               });
+            });
+        </script>
+        <!-- Migrate styling to external file-->
+        <style>
+            .login-mrm, .login-card{
+                display:none;
+            }
+        </style>
+            </head>
+    <body>
+
+        <!-- modal div partials -->
+
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="modalTitle">Title</h4>
+                    </div>
+                    <div id="modalBody" class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal for centre search -->
+
+        <div id="myModalSearch" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="innerModal">
+                        <div class="modal-header">
+                            <h3>We found more than one location with <br />the details you entered. </h3>
+                            <h4 class="modal-title lineCntr" id="modalTitle2"></h4>
+                        </div>
+                        <div id="modalBody2" class="modal-body">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="slidnav">
+
+                            <!-- new forgot pass s -->
+                <div class="fnewpart" style="display:none" id="newpassetup">
+                    <div class="uptt">
+                        <h5>Password Reset</h5>
+                        <p>Please create a new password which includes at least 1 (one) uppercase letter and a digit.</p>
+                    </div>
+                    <form class="frmprtbx" method="POST">
+                        <div class="form-group">
+                            <label for="newpass" class="sr-only">password</label>
+                            <input type="text" name="newpass" id="newpass" class="form-control" value="" placeholder="New Password" />
+                        </div>
+                        <div class="form-group">
+                            <label for="newpass" class="sr-only">password</label>
+                            <input type="text" name="newpass" id="newpass" class="form-control" value="" placeholder="New Password" />
+                        </div>
+                        <button type="submit" class="btn btn-block redbtn">Save &raquo;</button>
+                        <p class="remblock"><a href="#login" class="shwlogin">Return to Login Form</a></p>
+                    </form>
+                </div>
+                <!-- new forgot pass e -->
+
+                <!-- forgot pass s -->
+                <div class="forgpart" style="display:none" id="forgotmypass">
+                    <div class="uptt">
+                        <h5>Forgotten Details</h5>
+                        <p>Enter the email address associated with your account and we'll send you a password re-set email.</p>
+                    </div>
+                    <form class="frmprtbx" method="POST">
+                        <div class="form-group">
+                            <label for="forgotemail" class="sr-only">Email</label>
+                            <input type="text" name="forgotemail" id="forgotemail" class="form-control" value="" placeholder="Email Address" />
+                        </div>
+                        <button type="submit" class="btn btn-block redbtn">Submit &raquo;</button>
+                        <p class="remblock"><a href="#login" class="shwlogin">Return to Login Form</a></p>
+                    </form>
+                </div>
+                <!-- forgot pass e -->
+
+                <div class="logpart" id="myLogin">
+                    <div id="loginstatus"></div>
+                    <form class="frmprtbx" method="POST">
+                        <div class="form-group login-username">
+                            <label for="username" class="sr-only">Email</label>
+                            <input type="text" name="username" id="username" class="form-control" value="" placeholder="Email Address" />
+                        </div>
+                        <div class="form-group login-mrm">
+                            <label for="mrmid" class="sr-only">MRM ID</label>
+                            <input type="text" name="mrmid" id="mrmid" class="form-control" value="" placeholder="MRM ID" />
+                        </div>
+                        <div class="form-group login-card">
+                            <label for="cardid" class="sr-only">Card ID</label>
+                            <input type="text" name="cardid" id="cardid" class="form-control" value="" placeholder="Card ID" />
+                        </div>
+
+                        <div class="logalter">
+                            <ul>
+                                <li>Login By</li>
+                                <li><a id="selectemail">Email</a></li>
+                                <li><a id="selectmember">Member ID</a></li>
+                                <li><a id="selectcard">Card ID</a></li>
+                            </ul>
+                        </div>
+                        <div class="form-group login-password">
+                            Password
+                            <input type="password" name="password" id="password" class="form-control" value="" placeholder="Password"  />
+                        </div>
+                        <div class="login-or">
+                            Or
+                        </div>
+                        <div class="form-group login-password">
+                            PIN
+                            <input type="password" name="pin" id="pin" class="form-control" value="" placeholder="PIN"  />
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input name="rememberme" type="checkbox" id="rememberme" value="forever"> Remember Me
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-block redbtn booking-normal">Login &raquo;</button>
+                        <button type="submit" class="btn btn-block redbtn booking-redirect">Login &raquo;</button>
+                        <p class="remblock"><a href="#forgot" id="forgotpass">Forgotten Details?</a></p>
+                        <a href="http://www.everyoneactive.com/join-now" class="btn btn-block graylgtbn">Join up Today &raquo;</a>
+                    </form>
+                </div>
+                <p class="remblock">
+                    <b>Need Help:</b><br>
+                    <a href="#forgot">Contact Us</a><br>
+                    <a href="#forgot">FAQs</a>
+                </p>
+
+                    </nav>
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                
+                var loginChoice = 'username';
+                $('#selectemail').click(function () {
+                    loginChoice = 'username';
+                    $('.login-mrm').hide();
+                    $('.login-card').hide();
+                    $('.login-username').show();
+                });
+                $('#selectmember').click(function () {
+                    loginChoice = 'mrmid';
+                    $('.login-card').hide();
+                    $('.login-username').hide();
+                    $('.login-mrm').show();
+                });
+                $('#selectcard').click(function () {
+                    loginChoice = 'cardid';
+                    $('.login-username').hide();
+                    $('.login-mrm').hide();
+                    $('.login-card').show();
+                });
+
+                if ($.cookie('eacom_remember') !== undefined && $.cookie('eacom_remember').length > 0) {
+                    cookieData = JSON.parse($.cookie('eacom_remember'));
+                    
+                    if (cookieData.remember === true) {
+                        $("#rememberme").attr('checked', true);
+                    }
+                    
+                    switch (cookieData.choice) {
+                        case 'username':
+                            $('#username').val(cookieData.username);
+                            $('#selectemail').click();
+                        break;
+                        case 'mrmid':
+                            $('#mrmid').val(cookieData.mrmid);
+                            $('#selectmember').click();
+                        break;
+                        case 'cardid':
+                            $('#cardid').val(cookieData.cardid);
+                            $('#selectcard').click();
+                        break;
+                    }
+                }
+
+                // Perform AJAX login on form submit
+                $('#myLogin .booking-normal, #myLogin .booking-redirect').on('click', function (e) {
+                    del_cookie('X-Mapping-fjhppofk');
+
+                    $('#loginstatus').show().text('Validating...');
+
+                    var redirectMap = ($(this).hasClass('booking-normal') === true) ? '/my-news' : '/booking';
+
+                    var remember = false;
+                    if ($("#rememberme").is(':checked')) {
+                        remember = true;
+                    }
+
+                    var loginInput = {
+                        remember: remember,
+                        choice: loginChoice,
+                        username: $('#username').val(),
+                        mrmid: $('#mrmid').val(),
+                        cardid: $('#cardid').val()
+                    }
+
+                    $.ajax({
+                        type: 'POST',
+                        dataType: 'json',
+                        url: ajaxURL,
+                        data: {
+                            'action': 'ajaxlogin', //calls wp_ajax_nopriv_ajaxlogin
+                            'username': loginInput.username,
+                            'password': $('#password').val(),
+                            'mrmid': loginInput.mrmid,
+                            'cardid': loginInput.cardid,
+                            'pin': $('#pin').val(),
+                            'rememberme': remember,
+                            'security': loginsecurity},
+                        success: function (data) {
+                            //console.log(data);
+                            $('#loginstatus').text(data.message);
+                            if (data.loggedin == true) {
+                                // Set cookie to contain the value used for last login success
+                                del_cookie('eacom_remember');
+                                if (remember === true) {
+                                    $.cookie('eacom_remember', JSON.stringify(loginInput), {expires: 30, path: '/'});
+                                }
+                                document.location.href = siteURL + redirectMap;
+                            }
+                        }
+                    });
+                    e.preventDefault();
+                });
+                
+                // Forgotten password submit
+                $('#forgotmypass form').on('submit', function (e) {
+
+                    $('#loginstatus').show().text('Submitting...');
+
+                    $.ajax({
+                        type: 'POST',
+                        dataType: 'json',
+                        url: ajaxURL,
+                        data: {
+                            'action': 'ajaxforgot', //calls wp_ajax_nopriv_ajaxlogin
+                            'username': $('#forgotemail').val(),
+                            'password': $('#password').val(),
+                            'mrmid': $('#mrmid').val(),
+                            'cardid': $('#cardid').val(),
+                            'pin': $('#pin').val(),
+                            'security': loginsecurity},
+                        success: function (data) {
+                            //console.log(data);
+                            $('.uptt').text(data.message);
+                            $('#loginstatus').show().text('');
+                        }
+                    });
+                    e.preventDefault();
+                });
+                  $('.hunderline').click(function(){
+                   var iframe ='<iframe width="10%" height="1px" src="http://everyoneactive.nutritioncompleteonline.com/logout" id="frame" name="frame" ></iframe>';
+                  
+                   $('html').append(iframe);
+
+               });
+            });
+        </script>
+
+
+        <!-- Fixed navbar -->
+        <style>
+            .navbar {margin:0}
+            </style>
+        <div class="navbar navbar-default navbar-static-top navblk" role="navigation">
+            <div class="container hdr-extra">
+                
+<div class="logconfix hidden-xs"><div class="cpanmove logbtn"><a href="#"  id="nav-expander">Login <i class="fa fa-angle-double-right"></i></a></div></div>
+    <div class="cmobmv logbtn visible-xs"><a href="#"  id="nav-expandermob">Login <i class="fa fa-angle-double-right"></i></a></div>
+                <a class="navbar-brand" href='http://www.everyoneactive.com/index.php'><img src="//www.everyoneactive.com/wp-content/themes/mytheme/assets/images/logo.png"></a>
+                <div class="navbar-header mobile-menu-container">
+                    <button type="button" class="navbar-toggle collapsed mobile-menu" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span>MENU</span> <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="window-resize"><div class="text-size"><div class="inner-shadow">Text Size: <a class="text-resizer-text-size-normal active">A</a> <a class="text-resizer-text-size-medium">A</a> <a class="text-resizer-text-size-large">A</a></div></div></div>
+                <div class="navbar-collapse collapse right-nav">
+
+<ul id="menu-header-menu" class="nav navbar-nav"><li><a href='#' class='book-now'>Book now</a></li><li id="menu-item-26578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26578"><a href="http://www.everyoneactive.com/centre-finder/">Centre Finder</a></li>
+<li id="menu-item-7096" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7096"><a href="http://www.everyoneactive.com/centre-activities/">Centre Activities</a></li>
+<li id="menu-item-7101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7101"><a href="http://www.everyoneactive.com/online-training/">Online Training</a></li>
+<li id="menu-item-7068" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-7068"><a href="http://www.everyoneactive.com/about-us/" class="dropdown-toggle">About Us</a>
+<ul class="dropdown-menuTop depth_0 hidden-xs">
+	<li id="menu-item-7074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7074"><a href="http://www.everyoneactive.com/about-us/what-we-offer/">What We Offer</a></li>
+	<li id="menu-item-7075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7075"><a href="http://www.everyoneactive.com/about-us/meet-the-team/">Meet The Team</a></li>
+	<li id="menu-item-43647" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43647"><a href="http://www.everyoneactive.com/news">News</a></li>
+	<li id="menu-item-7077" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7077"><a href="http://www.everyoneactive.com/about-us/local-authorities/">Local Authorities</a></li>
+	<li id="menu-item-7076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7076"><a href="http://www.everyoneactive.com/about-us/awards/">Awards &#038; Achievements</a></li>
+	<li id="menu-item-7078" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7078"><a href="http://www.everyoneactive.com/about-us/partners/">Our Partners</a></li>
+	<li id="menu-item-26961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26961"><a href="http://www.everyoneactive.com/about-us/careers/">Careers</a></li>
+</ul>
+</li>
+<li><a href='http://www.everyoneactive.com/join-us'>Join Us</a></li></ul>                    
+                </div><!--/.nav-collapse -->
+
+            </div>
+        </div>
+
+
+        
+        <div class="container mainbox noisebg">
+
+<!-- Carousel -->
+<div id="mainCarousel" class="slider-box">
+	<ul class="bxslider">
+					<li>
+	        	<a href="learn-to-swim">
+					<img width="1024" height="479" src="http://www.everyoneactive.com/wp-content/uploads/2015/02/Home_banner_swim.jpg" class="img-responsive wp-post-image" alt="Home_banner_swim" />				</a>
+			</li>
+					<li>
+	        	<a href="fitness-offer">
+					<img width="1024" height="479" src="http://www.everyoneactive.com/wp-content/uploads/2015/11/Dec_Home_header-1024x479.jpg" class="img-responsive wp-post-image" alt="Dec_Home_header" />				</a>
+			</li>
+			</ul>
+</div>
+
+<script>
+	$(document).ready(function(){
+
+		var controls = true,
+			pager = false;
+
+		if ($(window).width() < 960) {
+			controls = false;
+			pager = true;
+		}
+
+		$('.bxslider').bxSlider({
+			mode: 'fade',
+			auto: true,
+			pager: pager,
+			speed:2000,
+			pause:7000,
+			controls: controls
+		});
+	});    
+</script>
+
+
+<!-- Find Centre Box -->
+<div class='container find-centre-panel'>
+	<div class='row'>
+        <div class='col-md-12'>	
+	        <form id="homeaddressform" name="homeaddressform" method="post" action="http://www.everyoneactive.com/centre-finder/">
+				<div class="findNerestHom">
+					<h3>Find your <strong>Nearest Centre..</strong></h3>
+				</div>
+				<div class="homeSrcTop">
+	                <div class="src-textboxC">
+	                    <input id="address" name="address" class="input" type="textbox" value="" placeholder="address, postcode, location">
+	                    <a href="#" onclick="resetLocation()"><i class="target-icon"></i></a>
+	                </div>
+				</div>
+		        <div class="smllTxtSrc">   
+	                Which has <strong>this facility</strong>
+	            </div> 
+				<div class="homeSrcTop">
+	                <input id="activityInput" name="facility" class="input" type="textbox" value="" placeholder="facility">
+				</div>
+				<input class='redbtn' type="submit" value="Search >>">
+	        </form>
+		</div>
+	</div>
+</div>
+
+
+<!-- Highlight section box -->
+<div class="container threecol">
+    <div class="home-social-media">
+<script>        
+function fbShare(url, title, descr, image, winWidth, winHeight) {
+        var winTop = (screen.height / 2) - (winHeight / 2);
+        var winLeft = (screen.width / 2) - (winWidth / 2);
+        window.open('http://www.facebook.com/sharer.php?s=100&p[title]=' + title + '&p[summary]=' + descr + '&p[url]=' + url + '&p[images][0]=' + image, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+    }
+    function twitterShare(url, title, descr, image, winWidth, winHeight) {
+        var winTop = (screen.height / 2) - (winHeight / 2);
+        var winLeft = (screen.width / 2) - (winWidth / 2);
+        window.open('http://twitter.com/share?text='+descr+'&url='+url, 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+    }
+    function linkedinShare(url, title, descr, image, winWidth, winHeight) {
+        var winTop = (screen.height / 2) - (winHeight / 2);
+        var winLeft = (screen.width / 2) - (winWidth / 2);
+        window.open('http://www.linkedin.com/shareArticle?mini=true&url='+url+'&title='+title+'&summary='+descr+'&source='+title+'', 'sharer', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+    }
+</script>    
+<a class='all-sm-fb' href='javascript:fbShare("http://www.everyoneactive.com/", "Everyone active", "Everyone active", "goo.gl/y5eXdn", 520, 350)'><i class="fa fa-facebook fa-2x"></i></a>
+          <a class='all-sm-twtr' href='javascript:twitterShare("http://www.everyoneactive.com/", "Everyone active", "Everyone active", "goo.gl/y5eXdn", 520, 350)'><i class="fa fa-twitter fa-2x"></i></a></div>
+	<div class="row">
+		<div class="col-xs-4 col-md-4">
+			<div class="highlightSection">
+				<div class="img-icon-container">
+					<i class="activity-icon"></i>
+					<img width="250" height="250" src="http://www.everyoneactive.com/wp-content/uploads/2014/10/Centre_Activities-250x250.jpg" class="img-responsive img-circle wp-post-image" alt="Centre_Activities" />				</div>
+				<h2>Centre Activities</h2>
+				<p>We have over 100 centres nationwide, offering state-of-the-art facilities and award winning member experiences.</p>
+				<a class="redbtn" href="centre-activities">Find out More <i class="fa fa-angle-double-right"></i></a>			</div>
+		</div>
+		<div class="col-xs-4 col-md-4">
+			<div class="highlightSection">
+        		<div class="img-icon-container">
+        			<i class="online-icon"></i>
+					<img width="250" height="250" src="http://www.everyoneactive.com/wp-content/uploads/2014/12/trainingOnline2-250x250.jpg" class="img-responsive img-circle wp-post-image" alt="trainingOnline2" />				</div>
+				<h2>Online Training</h2>
+				<p>Our training library has a full range of workouts, training programs and video classes to help get you active.</p>
+				<a class="redbtn" href="online-training">Find out More <i class="fa fa-angle-double-right"></i></a>			</div>
+		</div>
+
+		<div class="col-xs-4 col-md-4">
+			<div class="highlightSection">   
+    			<div class="img-icon-container"><i class="offer-icon"></i>
+					<img width="150" height="150" src="http://www.everyoneactive.com/wp-content/uploads/2014/09/305Swim-150x150.jpg" class="img-responsive img-circle wp-post-image" alt="305Swim" />				</div>
+				<h2>Latest Offers</h2>
+				<p>Find out more about our latest fitness, swim and activity offers.</p>
+				<a class="redbtn" href="latest-offers">Find out More <i class="fa fa-angle-double-right"></i></a>			</div>
+			</div>
+		</div>
+
+		<div style="height:30px;"/></div>
+
+
+		<!-- Nutrition Complete Banner-->   
+					<div class="row nc-banner-section nc-banner-section-alt">
+				<div  style="padding:0;">
+					
+<div style="margin:auto;visibility: hidden;" class="siteslides sherk_banners shortcodebody">
+<div class="sherkbanners_bxslider" bannerid="52168" v_controls="false" v_pager="true" v_captions="true" v_auto="true" v_minslides="1" v_maxslides="1" v_slidewidth="0"><div><div style="width:100%"><a href="http://www.everyoneactive.com/take-on-the-challenge/"><img style="margin:auto;" src="http://www.everyoneactive.com/wp-content/uploads/2015/11/Home_challenge.jpg" title=""/></a></div></div><div><div style="width:100%"><a href="http://www.everyoneactive.com/anthony-nolan/"><img style="margin:auto;" src="http://www.everyoneactive.com/wp-content/uploads/2015/11/Home_Anthony.jpg" title=""/></a></div></div><div><div style="width:100%"><a href="http://www.everyoneactive.com/nutrition-complete/"><img style="margin:auto;" src="http://www.everyoneactive.com/wp-content/uploads/2015/11/Home_Nutrition1.jpg" title=""/></a></div></div></div></div>				</div>
+			</div>
+				<!-- Nutrition Complete Banner-->
+
+
+		<!-- Challenge Banner-->
+		
+		<!-- <div class="changelleban">
+			<a href="latest-offers">
+				<img width="5184" height="3456" src="http://www.everyoneactive.com/wp-content/uploads/2014/09/305Swim.jpg" class="img-responsive wp-post-image" alt="305Swim" />			</a>
+		</div> -->
+		<!-- End Challenge Banner -->
+
+
+
+
+		<!-- Video Banner-->
+		<div class="container videoContainer">
+			<div class="row">
+				<div class="col-md-7">
+					<div id="utubeplayer" class="pull-right"></div>
+					<script>
+			    		//Load player api asynchronously.
+			    		var tag = document.createElement('script');
+			    		tag.src = "https://www.youtube.com/iframe_api";
+					    var firstScriptTag = document.getElementsByTagName('script')[0];
+					    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+					    var done = false;
+					    var player;
+					    function onYouTubeIframeAPIReady() {
+					    	player = new YT.Player('utubeplayer', {
+					        	videoId: 'ZubkU3GKyJ8',
+					          	events: {
+							        'onReady': onPlayerReady,
+							        'onStateChange': onPlayerStateChange
+							    }
+							});
+						}
+					    function onPlayerReady(evt) {
+					        evt.target.pauseVideo();
+					    }
+					    function onPlayerStateChange(evt) {
+					        if (evt.data == YT.PlayerState.PLAYING && !done) {
+					            setTimeout(stopVideo, 6000);
+					            done = true;
+					        }
+					    }
+					    function stopVideo() {
+					        player.stopVideo();
+				    	}
+					</script>
+				</div>
+				<div class="col-md-5">
+					<div class="video-details">
+						<h2>Get motivated & get active</h2><p>Our vision is to be everyone’s first choice for activity and we've made it our mission to encourage everyone to participate in 30 minutes of moderate physical activity five times a week.</p>						<a href="http://www.everyoneactive.com/join-us" class="redbtn">Join Us <i class="fa fa-angle-double-right"></i></a>
+						<a href="http://www.everyoneactive.com/centre" class="big-link">Find A Centre <i class="fa fa-angle-double-right"></i></a>
+		            </div>
+				</div>
+			</div>
+		</div>
+		<!-- End Video Banner -->
+
+
+
+		<!-- Call to action Banner-->
+		<div class="container call-banner call-banner-home">
+			<div class="row">
+		    	<div class="col-md-8">
+		    		<div class="redbox">
+						<div class="redbox-inner">
+		    				<div class="redbox-img">
+		    					<a href="our-vision-mission">
+			    					<img width="251" height="297" src="http://www.everyoneactive.com/wp-content/uploads/2015/03/redJoin.png" class="img-responsive wp-post-image" alt="redJoin" />								</a>
+							</div>
+							<div class="redbox-details">
+								<h2>SET GOALS & TRACK YOUR TRAINING IN YOUR PROFILE AREA</h2>
+								<p>Accessing your profile are is free and easy. This allows you to set goals, choose and schedule training & workout plans, track how you are progressing. Feel Better For It.</p>
+											        				<p>
+			        					<a class="blackbtn" href="#" id="slidedatlogin">Login <i class="fa fa-angle-double-right"></i></a>
+			        					<span>
+			        						Not a member?	<a href="http://www.everyoneactive.com/join-us">Sign-up <i class="fa fa-angle-double-right"></i></a>
+			        					</span>
+			        				</p>
+		        						        			</div>
+		        		</div>
+		        	</div>
+		        </div>
+				<div class="col-md-4">
+					<div class="right-contact">
+						<h2>Contact Us</h2>
+						<p>Questions &amp; queries? Whatever it is we'll find the right person to answer them in no time at all.</p>
+						<form id="contactUsForm" method="post" class="form-horizontal" action="http://www.everyoneactive.com/contact-us">
+
+                 
+                          <div class="selectform"><select style="float:left;" class="form-control input" id="enquirytype" name="enquirytype">
+                          <option  value="General Enquiry">General Enquiry</option>
+                          <option  value="Membership">Membership</option>
+                          <option  value="Software/Website Support" >Website Enquiry</option>
+                          <option  value="Mobile">Mobile App</option>
+                          <option  value="Swim Enquiry">Swim Enquiry</option>
+                          <option  value="Accounts">Join Online</option>
+                          <option  value="Loggingin">Logging In</option>
+                          <option  value="Bookonline">Book Online</option>
+                          </select>
+                        </div>
+                          <button class="redButton" type="submit" value="submitted" name="goBtn" id="goBtn" class="btn btn-default">GO <i class="fa fa-angle-double-right"></i></button>
+                      
+          </form>					</div>
+				</div>	
+			</div>
+		</div>
+		<!-- END Call to action banner -->
+
+                <!-- Sub Banner-->
+
+
+<div class="changelleban leisure">
+		<a target="_blank" href="http://www.discovery.uk.com/personal-trainer-courses">
+		<img width="1035" height="149" src="http://www.everyoneactive.com/wp-content/uploads/2014/09/uk_active_banner.png" class="img-responsive wp-post-image" alt="uk_active_banner" />		</a>
+        <div class="banner-text"><div style="">
+                <p><b>Everyone Active</b> a partner of Discovery Learning, <a href="http://www.discovery.uk.com/personal-trainer-courses" style="color:#e01912;" target="_blank">our recommended personal trainer courses provider</a>, and a partner of Sports & Leisure Management (SLM), the leading and longest established leisure management company in the UK.<br><a class="red-link" href="http://www.discovery.uk.com/personal-trainer-courses" target="_blank">Find Out More <i class="fa fa-angle-double-right"></i></a></p>
+   </div></div>
+	</div>
+	
+<!-- End Sub Banner -->
+
+
+
+		<script>
+			//load activites typeahead
+			$.ajax({
+			    url: restURL+'taxonomies/Facilities/terms',
+			    global: false,
+			    dataType: 'json',
+			    success: function(response) {
+			    	var activities=[];
+					for ( var i = 0, l = response.length; i < l; i++ ) {
+			    		activities.push(response[ i ].name);
+					}
+
+			        $('#activityInput').typeahead({
+			            hint: true,
+			            highlight: true,
+			            minLength: 2
+			        }, {
+			        	name: 'activities',
+			            displayKey: 'value',
+			            source: substringMatcher(activities)
+			        });
+			    }
+			});
+		</script>
+
+
+		<footer>
+<div class="ftr-text-size">Text Size: <a class="text-resizer-text-size-normal active">A</a> <a class="text-resizer-text-size-medium">A</a> <a class="text-resizer-text-size-large">A</a></div>
+<div class="row">
+
+<div class="col-xs-3 col-md-2">
+<div id="support-cnt">
+<li id="list-2" class="widget widget_link_list"><h2 class="widgettitle">Support</h2>
+<ul  class="list" style="padding:0;">
+
+		<li class='footerSmallLink'><a href='/ask-an-expert'>Ask an Expert</a></li><li class='footerSmallLink'><a href='/question'>FAQs</a></li><li class='footerSmallLink'><a href='/contact-us'>Contact Us</a></li></ul></li>
+</div>
+<div class="mobile-social-media no-bgtop"><a href='http://www.facebook.com/everyoneactive'><span class="red-circle"><i class="fa fa-facebook fa-2x"></i></span></a></div>
+</div>
+
+<div class="col-xs-3 col-md-2">
+<div id="footer-about-cnt">
+<li id="list-3" class="widget widget_link_list"><h2 class="widgettitle">About Us</h2>
+<ul  class="list" style="padding:0;">
+
+		<li class='footerSmallLink'><a href='/about-us'>SLM Ltd</a></li><li class='footerSmallLink'><a href='/news'>News</a></li><li class='footerSmallLink'><a href='/media'>Media</a></li><li class='footerSmallLink'><a href='/careers'>Careers</a></li><li class=''><a href='http://www.everyoneactiveshop.co.uk'>Online Shop</a></li></ul></li>
+</div>
+<div class="mobile-social-media"><a href='https://twitter.com/EveryoneActive'><span class="red-circle"><i class="fa fa-twitter fa-2x"></i></span></a></div>
+</div>
+
+<div class="col-xs-3 col-md-2">
+<div id="legal-cnt">
+<li id="list-4" class="widget widget_link_list"><h2 class="widgettitle">Legal</h2>
+<ul  class="list" style="padding:0;">
+
+		<li class=''><a href='/terms-and-conditions/'>Membership Terms and Conditions</a></li><li class=''><a href='/terms-conditions-online/'>Online Terms and Conditions</a></li><li class='footerSmallLink'><a href='/terms-and-conditions-facility/'>Facility Terms and Conditions</a></li><li class='footerSmallLink'><a href='/privacy'>Privacy Policy</a></li></ul></li>
+</div>
+<div class="mobile-social-media"><a href='https://www.youtube.com/user/everyoneactive'><span class="red-circle"><i class="fa fa-youtube-play fa-2x"></i></span></a></div>
+</div>
+
+
+<div class="col-xs-3 col-sm-3 col-md-2">
+<div  id="footer-social-media">
+<h2 class="widgettitle">Social Media</h2>
+<ul>
+<li><a href='http://www.facebook.com/everyoneactive'><span class="red-circle"><i class="fa fa-facebook"></i></span> Facebook</a></li><li><a href='https://twitter.com/EveryoneActive'><span class="red-circle"><i class="fa fa-twitter"></i></span> Twitter</a></li><li><a href='https://www.youtube.com/user/everyoneactive'><span class="red-circle"><i class="fa fa-youtube-play"></i></span> Youtube</a></li>
+</ul>
+ </div>
+</div>
+
+
+<div class="col-xs-12 col-md-4  text-right">
+<a href='/index.php'><img src="//www.everyoneactive.com/wp-content/themes/mytheme/assets/images/ftr-logo.png" class="ftr-logo"></a>
+<div class="ftr-txt-btm">Feel better for it</div>
+</div>
+
+
+</div>
+
+<div class="bottom-footer">
+<div class="row">
+
+<div class="col-xs-8 col-md-9">
+Sports &amp; Leisure Management (SLM) Ltd. <br />
+Company Registration: 2204085
+</div>
+
+<div class="col-xs-4 col-md-3 copyright-pos">
+2015 Copyright SLM Ltd.
+</div>
+
+</div>
+</div>
+
+</footer>
+
+
+</div>
+
+
+
+<script type='text/javascript' src="//www.everyoneactive.com/wp-content/themes/mytheme/assets/js/viewportDetect.js"></script>
+<script type='text/javascript' src="//www.everyoneactive.com/wp-content/themes/mytheme/assets/js/jquery.matchHeight.js"></script>
+<script type='text/javascript' src="//www.everyoneactive.com/wp-content/themes/mytheme/assets/js/jquery.resize.js"></script>
+<script type="text/javascript" src="//www.everyoneactive.com/wp-content/themes/mytheme/assets/js/general.js"></script>
+
+<!-- carousel script -->
+<script src="//www.everyoneactive.com/wp-content/themes/mytheme/js/jquery.bxslider/jquery.bxslider.min.js"></script>
+
+<!-- typeahead script  -->	
+<script src="//www.everyoneactive.com/wp-content/themes/mytheme/js/typeahead.js"></script>
+
+
+<!-- share script -->
+<script src='//www.everyoneactive.com/wp-content/themes/mytheme/js/share42.js'></script>
+
+<!-- fullcalendar script -->
+<script src='//www.everyoneactive.com/wp-content/themes/mytheme/js/lib/moment.min.js'></script>
+<script src='//www.everyoneactive.com/wp-content/themes/mytheme/js/lib/jquery-ui.custom.min.js'></script>
+<script src='//www.everyoneactive.com/wp-content/themes/mytheme/js/fullcalendar.min.js'></script>
+<script src='//www.everyoneactive.com/wp-content/themes/mytheme/js/jquery.ui.touch-punch.min.js'></script>
+
+<script src='//www.everyoneactive.com/wp-content/themes/mytheme/js/icheck.js'></script>
+
+<!-- utility functions script -->
+<script src='//www.everyoneactive.com/wp-content/themes/mytheme/js/main.js'></script>
+
+<!-- bootstrap validation script -->
+<script type="text/javascript" src="//www.everyoneactive.com/wp-content/themes/mytheme/js/bootstrapvalidator-dist-0.5.2/dist/js/bootstrapValidator.min.js"></script>
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+</script><script type='text/javascript'>
+/* <![CDATA[ */
+var alm_localize = {"ajaxurl":"http:\/\/www.everyoneactive.com\/wp-admin\/admin-ajax.php","alm_nonce":"3957b6d7e3","pluginurl":"http:\/\/www.everyoneactive.com\/wp-content\/plugins\/ajax-load-more","scrolltop":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.everyoneactive.com/wp-content/plugins/ajax-load-more/core/js/ajax-load-more.min.js?ver=1.1'></script>
+<script type='text/javascript' src='http://www.everyoneactive.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.everyoneactive.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.everyoneactive.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.2'></script>
+<script type='text/javascript' src='http://www.everyoneactive.com/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.5.16'></script>
+<script type='text/javascript' src='http://www.everyoneactive.com/wp-content/plugins/sherk-carousel-banners/assets/js/jquery.bxslider.js?ver=1.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/www.everyoneactive.com\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif","i18n_view_cart":"View Cart","cart_url":"http:\/\/www.everyoneactive.com\/shopping-cart\/","is_cart":"","cart_redirect_after_add":"no"};
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/www.everyoneactive.com\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif","i18n_view_cart":"View Cart","cart_url":"http:\/\/www.everyoneactive.com\/shopping-cart\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//www.everyoneactive.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=2.2.8'></script>
+<script type='text/javascript' src='//www.everyoneactive.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.60'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/www.everyoneactive.com\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif"};
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","ajax_loader_url":"\/\/www.everyoneactive.com\/wp-content\/plugins\/woocommerce\/assets\/images\/ajax-loader@2x.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//www.everyoneactive.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=2.2.8'></script>
+<script type='text/javascript' src='//www.everyoneactive.com/wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min.js?ver=1.3.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","fragment_name":"wc_fragments"};
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","fragment_name":"wc_fragments"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//www.everyoneactive.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=2.2.8'></script>
+</body>
+</html>
