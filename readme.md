@@ -6,12 +6,12 @@ Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered H
 
 ### Tech
 
-Phonegap
-Angular
-Gulp
-Less
-D3
-Google Maps
+* Phonegap
+* Angular
+* Gulp
+* Less
+* D3
+* Google Maps
 
 ### Installation
 
